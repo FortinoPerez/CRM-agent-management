@@ -1,17 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { GeistSans } from "geist/font/sans"; // import font
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import "remixicon/fonts/remixicon.css"; // import Remix Icons CSS
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,11 +14,48 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html
+      lang="en"
+      className={`${GeistSans.className} antialiased dark:bg-gray-950`}
+    >
+      <body className="flex">
+        <aside className="w-64 dark:bg-gray-950 text-white flex flex-col items-center p-4">
+            <div className="flex items-center mb-4 self-start">
+            <img
+              src="/pernexium_logo.png"
+              alt="Logo"
+              className="w-10 h-auto"
+            />
+            <span style={{ color: '#1F417C' }} className="ml-2 text-xl font-bold">Pernexium</span>
+            </div>
+          <h2 className="text-lg font-medium mb-4 self-start">
+            Modulo Gestión
+          </h2>
+          <nav className="flex flex-col space-y-2 w-full">
+            <a
+              href="/"
+              className="flex items-center space-x-2 text-left text-sm p-2 hover:bg-gray-700 rounded w-full"
+            >
+              <i className="ri-home-line"></i>
+              <span>Inicio</span>
+            </a>
+            <a
+              href="/credit-search"
+              className="flex items-center space-x-2 text-left text-sm p-2 hover:bg-gray-700 rounded w-full"
+            >
+              <i className="ri-search-line"></i>
+              <span>Busqueda de Credito</span>
+            </a>
+            <a
+              href="/notifications"
+              className="flex items-center space-x-2 text-left text-sm p-2 hover:bg-gray-700 rounded w-full"
+            >
+              <i className="ri-notification-line"></i>
+              <span>Notificaciones</span>
+            </a>
+          </nav>
+        </aside>
+        <main className="flex-1 p-4">{children}</main>
       </body>
     </html>
   );
