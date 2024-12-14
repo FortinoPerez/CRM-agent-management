@@ -6,7 +6,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../components/ui/select"
+} from "./ui/Select"
 
 export function SelectSearchInput() {
   const data = [
