@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { TextareaHero } from '@/components/SideNavComponents/TextareaActive';
+import { TextareaHero } from "@/components/SideNavComponents/TextareaActive";
 import { CheckboxCall } from "./CheckboxText";
 import { DropdownContact } from "./ContactDropdown";
 import { DropdownPhone } from "./PhoneDropdown";
@@ -17,40 +17,41 @@ const SideNavGestionCliente = () => {
       <div className="flex flex-col space-y-4">
         {/* Título */}
         <h2 className="text-xl font-semibold">Gestión del cliente</h2>
-        
-        {/* Campo para comentarios */}
-        <div className="mb-0">
-          <TextareaHero/>
-          </div>
-            {/* Micrófono */}
-          
 
-        {/* Llamada telefónica */}
-        <div className="mb-0">
-            <CheckboxCall/>
-          </div>
+          {/* Campo para comentarios */}
+          <TextareaHero />
 
-        {/* Medio de contacto */}
-        <div className="mb-0">
-          <DropdownContact/>
-          {/* Número de teléfono contactado */}
-          <DropdownPhone/>
-          {/* Dictamen */}
-          <RadioGroupReport/>
-          </div>
+          {/* Micrófono */}
+       
+          {/* Llamada telefónica */}
+          <CheckboxCall />
 
-        {/* Subdictamen */}
-        <div className="mb-0">
-          <SelectSubdictum/>
-        </div>
-
-        {/* Recordatorio de llamada */}
         <div>
-            <legend className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
-                Recordatorio de llamada al cliente
-            </legend>
-            <DatePickerYearNavigation/>
-            <TimePicker/>
+          <div className="mb-2">
+          {/* Medio de contacto */}
+          <DropdownContact />
+
+          {/* Número de teléfono contactado */}
+          <DropdownPhone />
+          </div>
+
+          <div className = "mb-2">
+          {/* Dictamen */}
+          <RadioGroupReport />
+          </div>
+
+          <div className = "mb-2">
+          {/* Subdictamen */}
+          <SelectSubdictum />
+          </div>
+        
+          {/* Recordatorio de llamada */}
+          <legend className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-1">
+            Recordatorio de llamada al cliente
+          </legend>
+          <DatePickerYearNavigation />
+          <TimePicker />
+
         </div>
 
         {/* Botones */}

@@ -27,7 +27,7 @@ export function DropdownPhone() {
     <>
       <Label htmlFor="size">Número de teléfono contactado</Label>
       <Select>
-        <SelectTrigger id="size" className="mt-2">
+        <SelectTrigger id="size" className="mt-0">
           <SelectValue placeholder="Opcines" />
         </SelectTrigger>
         <SelectContent>

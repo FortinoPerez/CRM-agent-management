@@ -3,7 +3,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/Radiogroup"
 
 export const RadioGroupReport = () => (
     <form className="flex justify-center">
-        <fieldset className="space-y-3">
+        <fieldset className="space-y-2">
             <legend className="text-sm font-medium text-gray-900 dark:text-gray-50">
                 Dictamen
             </legend>

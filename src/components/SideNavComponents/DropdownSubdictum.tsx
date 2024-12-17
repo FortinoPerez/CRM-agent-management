@@ -63,7 +63,7 @@ export function SelectSubdictum() {
     <>
       <Label htmlFor="size">Subdictamen</Label>
       <Select>
-        <SelectTrigger id="size" className="mt-2">
+        <SelectTrigger id="size" className="mt-0">
           <SelectValue placeholder="Select" />
         </SelectTrigger>
         <SelectContent>

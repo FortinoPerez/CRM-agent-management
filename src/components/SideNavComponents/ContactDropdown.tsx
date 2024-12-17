@@ -35,7 +35,7 @@ export function DropdownContact() {
     <>
       <Label htmlFor="size">Medio de contacto</Label>
       <Select>
-        <SelectTrigger id="size" className="mt-2">
+        <SelectTrigger id="size" className="mt-0">
           <SelectValue placeholder="Opciones" />
         </SelectTrigger>
         <SelectContent>

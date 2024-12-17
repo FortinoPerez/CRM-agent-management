@@ -4,6 +4,7 @@ import { SelectIconExample } from "@/components/selectCamp";
 import { SelectSearchInput } from "@/components/selectSearchItem";
 import { InputSearchCredit } from "@/components/inputSearch";
 import { ButtonHero } from "@/components/buttonSearch";
+import Image from "next/image";
 
 const DividerHero = () => <Divider />;
 
@@ -26,24 +27,26 @@ export default function BusquedaAvanzada() {
         </Text>
 
         <div className="flex justify-start items-center w-full gap-4">
-  <div>
-    <SelectIconExample />
-  </div>
-  <div>
-    <SelectSearchInput />
-  </div>
-  <div className="w-1/2">
-    <InputSearchCredit />
-  </div>
-  <div>
-    <ButtonHero />
-  </div>
-</div>
+          <div>
+            <SelectIconExample />
+          </div>
+          <div>
+            <SelectSearchInput />
+          </div>
+          <div className="w-1/2">
+            <InputSearchCredit />
+          </div>
+          <div>
+            <ButtonHero />
+          </div>
+        </div>
 
         <div className="flex justify-center items-center mt-20">
-          <img
+          <Image
             src="/search_image.png" // Reemplaza con tu imagen real
             alt="Búsqueda de clientes"
+            width={500} // Set appropriate width
+            height={192} // Set appropriate height
             className="w-auto h-48"
           />
         </div>
